@@ -1,10 +1,10 @@
 *,
-*::after,
-*::before {
-  box-sizing: border-box;
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+*::before,
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -14,6 +14,135 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --background-color: #ecf0f1;
+  --text-color: #333;
+  --hover-color: #2980b9
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  perspective: 200px;
+}
+
+/* Burger Icon Container */
+.burger-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  background: hwb(0 100% 0% / 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+/* Burger Icon Lines */
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Checkbox Hack */
+#burger-toggle {
+  display: none;
+}
+
+/* Navigation Styles */
+.nav-menu {
+  position: fixed;
+  right: -200px;
+  transition: right 0.3s ease;
+  top: 0;
+  right:-200px;
+  z-index: 9998;
+  width: 200px;
+  height: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #273849 100%);
+  box-shadow: -4px 0 15px #00000033;
+  overflow-y: auto;
+  padding-top: 100px;
+}
+
+.nav-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ffffff0d;
+  backdrop-filter: blur(10px);
+}
+
+.nav-menu ul {
+  list-style-type: none;
+}
+
+.nav-menu ul li {
+  margin: 0 15px;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: left 0.3s ease;
+}
+
+.nav-menu ul li a:hover::after {
+  left: 0;
+}
+
+/* Burger Icon Animation on Checkbox Checked */
+#burger-toggle:checked ~ .burger-container .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger-toggle:checked ~ .burger-container .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+#burger-toggle:checked ~ .burger-container .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Slide In */
+#burger-toggle:checked ~ .nav-menu {
+  right: 0;
+  
 }
 
 .scroll-wrapper {
@@ -83,7 +212,7 @@
 
 .intro-section {
   height: 100%;
-  background-color: #CCC9BC;
+  background-color: #fdfdfd;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,14 +232,15 @@
   line-height: 1.6;
 }
 
-.intro-content .highlight {
-  color: #e60044;
+.intro-content .highlight a {
+  color: #e60044; /
   font-weight: bold;
+  text-decoration: none; /
 }
 
 .bio-section {
    height: 100%;
-  background-color: #fdfdfd;
+  background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,7 +254,7 @@
 }
 
 .bio-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -149,7 +279,7 @@
 
 .bioimage-section .image-container {
   position: relative;
-  max-width: 1024px;
+  max-width: 800px;
 }
 
 .bioimage-section .centered-image {
@@ -171,7 +301,7 @@
 }
 .tomb-section {
    height: 100%;
-  background-color: #fdfdfd;
+  background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,7 +315,7 @@
 }
 
 .tomb-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -226,8 +356,8 @@
   text-align: right;
 }
 .arch-section {
-   height: 100%;
-  background-color: #fdfdfd;
+  height: 100%;
+  background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,7 +371,7 @@
 }
 
 .arch-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -287,7 +417,7 @@
 }
 .rose-section {
    height: 100%;
-  background-color: #fdfdfd;
+    background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -301,7 +431,7 @@
 }
 
 .rose-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -343,7 +473,7 @@
 }
 .anat-section {
    height: 100%;
-  background-color: #fdfdfd;
+  background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -357,7 +487,7 @@
 }
 
 .anat-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -403,7 +533,7 @@
 }
 .cast-section {
    height: 100%;
-  background-color: #fdfdfd;
+  background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -417,7 +547,7 @@
 }
 
 .cast-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -442,15 +572,26 @@
 }
 
 .phrenology-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
   line-height: 1.6;
 }
 
+.phrenology-model section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
 .models-grid {
   display: flex;
+  padding: 120px; 
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -471,12 +612,12 @@
   font-size: 13px;
   font-weight: normal;
   margin: 5px 0;
-  color: #4A4A4A;
+  color:#fdfdfd;
 }
 
 .sketchfab-embed-wrapper a {
   font-weight: bold;
-  color: #1CAAD9;
+  color: #fdfdfd;
   text-decoration: none;
 }
 
@@ -498,11 +639,21 @@
 }
 
 .phrenologycast-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
   line-height: 1.6;
+}
+
+.phrenologycastmodel-section {
+  height: 100%;
+  background-color: #557777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .sketchfab-embed-wrapper iframe {
@@ -511,7 +662,8 @@
   border-radius: 8px;
 }
 
-.comparison-section {
+
+.comparer-section {
   height: 100%;
   background-color: #fdfdfd;
   display: flex;
@@ -521,56 +673,125 @@
   text-align: center;
 }
 
-.comparison-content {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.comparer-content {
+  max-width: 700px;
 }
 
-.comparison-content h1 {
-  text-align: center;
+.comparer-content h1 {
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
   line-height: 1.6;
 }
 
-.comparison-grid {
+.comparisonmodel-section {
+  height: 100%;
+  background-color: #557777;
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap:50px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding: 20px 50px;
+  text-align: center;
 }
 
-.img-comp-container {
+.comparer-grid {
+  display: flex;
+  padding: 70px; 
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-slider-container {
   position: relative;
-  height: auto;
-  width: 500px;
-  max-width: 100%;
+  width: 400px;
+  height: 500px;
+  border: 5px solid #fff;
+  border-radius: 20px;
   overflow: hidden;
 }
-
-.img-comp-img {
+.image-slider-container .image {
   position: absolute;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-}
-
-.img-comp-img img {
-  display: block;
-  vertical-align: middle;
   width: 100%;
-}
-
-.img-comp-overlay {
-  position: absolute;
-  top: 0;
+  height: 100%;
   left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+.image-slider-container .image:nth-child(1) {
+  background: url("https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/reconstruccionartisticacomprada.JPG");
+}
+.image-slider-container .image:nth-child(2) {
+  background: url("https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/cast-bruce.JPG");
   width: 50%;
-  overflow: hidden;
+}
+.image-slider-container .range-slider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: rgba(242, 242, 242, 0.2);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 2;
+  transition: all 200ms linear;
+}
+.image-slider-container .range-slider:hover {
+  background: rgba(242, 242, 242, 0.1);
+}
+.image-slider-container .range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 6px;
+  height: 800px;
+  background: white;
+  cursor: move;
+  transition: all 300ms ease;
+}
+ 
+.slider-control {
+  z-index: 0;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  cursor: grab;
+}
+.slider-control::after, .slider-control::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider-control::after {
+  content: "";
+  right: 3px;
+}
+.slider-control::before {
+  content: "";
+  left: 3px;
+}
+ 
+@keyframes focusToSlider {
+  from {
+    box-shadow: inset 0 0 200px;
+  }
+  to {
+    box-shadow: inset 0 0 0 0;
+  }
 }
 
 .sketchfab-embed-wrapper {
@@ -583,20 +804,9 @@
   height: 350px;
   border-radius: 8px;
 }
-
-.img-comp-slider {
-  position: absolute;
-  z-index: 9;
-  cursor: ew-resize;
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  border-radius: 50%;
-  opacity: 0.7;
-}
 .facial-section {
    height: 100%;
-  background-color: #fdfdfd;
+  background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -610,7 +820,7 @@
 }
 
 .facial-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -628,31 +838,30 @@
   position: relative;
 }
 
-.facialimage-section .image-container {
-  position: relative;
-  max-width: 1024px;
+.facialimage-section .facial-container {
+  max-width: 700px;
 }
 
 .facialimage-section .centered-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-width: 80%;
+  height: 20%;
+  border-radius: 4px;
 }
 
 .facialimage-section .image-credit {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 0.8em;
+  bottom: 15px;
+  right: 12px;
+  font-size: 0.6em;
   background: rgba(255, 255, 255, 0.8);
   color: #000;
-  padding: 6px 10px;
-  border-radius: 4px;
+  padding: 1px 250px;
+  border-radius: 1px;
   text-align: right;
 }
 .bye-section {
-   height: 100%;
-  background-color: #fdfdfd;
+   height: 150%;
+  background-color:  #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -665,16 +874,16 @@
   max-width: 700px;
 }
 
-.bye-content h1 {
-  text-align: center;
+.bye-content h2 {
+  text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
 .thanks-section {
   height: 100%;
-  background-color: rgb(52, 52, 109);
+  background-color:  #557777;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -688,16 +897,17 @@
 }
 
 .thanks-content h1 {
-  text-align: center;
+  text-align: justify;
    font-family: 'Arial', sans-serif;
    color: #ededed;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: bold;
   line-height: 1.6;
 }
 
-.uoelogo-section {
-  height: 100%;
+
+.uoeimage-section {
+  height: 80%;
   background-color: #fdfdfd;
   display: flex;
   justify-content: center;
@@ -707,13 +917,136 @@
   position: relative;
 }
 
-.uoelogo-section .image-container {
+.uoeimage-section .image-container {
   position: relative;
-  max-width: 1024px;
+  max-width: 80%;
 }
 
-.uoelogo-section .centered-image {
-  max-width: 100%;
+.uoeimage-section .centered-image {
+  max-width: 80%;
   height: auto;
   border-radius: 8px;
+}
+
+/* ======== MEDIA QUERIES ======== */
+
+/* Tablets (iPad vertical y horizontal, 768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .banner-content,
+  .intro-content,
+  .bio-content,
+  .tomb-content,
+  .arch-content,
+  .rose-content,
+  .anat-content,
+  .cast-content,
+  .comparer-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .models-grid,
+  .comparer-grid {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .sketchfab-embed-wrapper iframe {
+    height: 320px;
+  }
+
+  .image-slider-container {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .comparisonmodel-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+}
+
+/* Smartphones (hasta 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .burger-container {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 25px;
+  }
+
+  .burger-line {
+    height: 2px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    right: -100%;
+    height: 100vh;
+    padding-top: 80px;
+  }
+
+  #burger-toggle:checked ~ .nav-menu {
+    right: 0;
+  }
+
+  .scroll-wrapper {
+    overflow-y: visible;
+    scroll-snap-type: none;
+  }
+
+  .scroll-section {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .banner-content,
+  .intro-content,
+  .bio-content,
+  .tomb-content,
+  .arch-content,
+  .rose-content,
+  .anat-content,
+  .cast-content,
+  .phrenology-content,
+  .phrenologycast-content,
+  .comparer-content,
+  .facial-content,
+  .bye-content,
+  .thanks-content {
+    padding: 20px;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .phrenology-model section,
+  .phrenologycastmodel-section,
+  .comparisonmodel-section {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .sketchfab-embed-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .sketchfab-embed-wrapper iframe {
+    height: 260px;
+  }
+
+  .image-slider-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    border-width: 3px;
+    border-radius: 12px;
+  }
 }
