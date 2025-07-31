@@ -32,7 +32,7 @@
 
 .banner-section {
   height: 100%;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a0/%2B1136_wurde_Das_Zisterienserkloster_Melrose_gegr%C3%BCndet._24.jpg');
+  background-image: url('https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/melroseabbey.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -66,7 +66,7 @@
 .author {
   font-size: 1.1em;
   margin-top: 20px;
-  color: #00000;
+  color: #00;
 }
 
 .image-credit {
@@ -82,7 +82,7 @@
 }
 
 .intro-section {
-  height: 300%;
+  height: 100%;
   background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
@@ -108,20 +108,57 @@
   font-weight: bold;
 }
 
-.image-container {
-  position: relative;
+.bio-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.bio-content {
+  max-width: 700px;
+}
+
+.bio-content h1 {
   text-align: center;
-  margin-top: 30px;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.bio-content .highlight {
+  color: #e60044;
+  font-weight: bold;
+}
+
+.bioimage-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.bioimage-section .image-container {
+  position: relative;
   max-width: 1024px;
 }
 
-.centered-image {
+.bioimage-section .centered-image {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-.image-container .image-credit {
+.bioimage-section .image-credit {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -131,4 +168,530 @@
   padding: 6px 10px;
   border-radius: 4px;
   text-align: right;
+}
+.tomb-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.tomb-content {
+  max-width: 700px;
+}
+
+.tomb-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.tombimage-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.tombimage-section .image-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.tombimage-section .centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tombimage-section .image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: right;
+}
+.arch-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.arch-content {
+  max-width: 700px;
+}
+
+.arch-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.arch-content .highlight {
+  color: #e60044;
+  font-weight: bold;
+}
+
+.archimage-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.archimage-section .image-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.archimage-section .centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.archimage-section .image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: right;
+}
+.rose-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.rose-content {
+  max-width: 700px;
+}
+
+.rose-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.roseimage-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.roseimage-section .image-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.roseimage-section .centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.roseimage-section .image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: right;
+}
+.anat-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.anat-content {
+  max-width: 700px;
+}
+
+.anat-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.anat-content .highlight {
+  color: #e60044;
+  font-weight: bold;
+}
+
+.anatimage-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.anatimage-section .image-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.anatimage-section .centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.anatimage-section .image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: right;
+}
+.cast-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.cast-content {
+  max-width: 700px;
+}
+
+.cast-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.phrenology-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.phrenology-content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.phrenology-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.models-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sketchfab-embed-wrapper {
+  flex: 1 1 480px;
+  max-width: 480px;
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+}
+
+.sketchfab-embed-wrapper p {
+  font-size: 13px;
+  font-weight: normal;
+  margin: 5px 0;
+  color: #4A4A4A;
+}
+
+.sketchfab-embed-wrapper a {
+  font-weight: bold;
+  color: #1CAAD9;
+  text-decoration: none;
+}
+
+.phrenologycast-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.phrenologycast-content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.phrenologycast-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 480px;
+  border-radius: 8px;
+}
+
+.comparison-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.comparison-content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.comparison-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.comparison-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.img-comp-container {
+  position: relative;
+  height: auto;
+  width: 500px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.img-comp-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.sketchfab-embed-wrapper {
+  flex: 1 1 480px;
+  max-width: 500px;
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.facial-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.facial-content {
+  max-width: 700px;
+}
+
+.facial-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.facialimage-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.facialimage-section .image-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.facialimage-section .centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.facialimage-section .image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: right;
+}
+.bye-section {
+   height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.bye-content {
+  max-width: 700px;
+}
+
+.bye-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.thanks-section {
+  height: 100%;
+  background-color: rgb(52, 52, 109);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.thanks-content {
+  max-width: 700px;
+}
+
+.thanks-content h1 {
+  text-align: center;
+   font-family: 'Arial', sans-serif;
+   color: #ededed;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
 }
