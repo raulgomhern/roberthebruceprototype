@@ -695,3 +695,25 @@
   font-weight: bold;
   line-height: 1.6;
 }
+
+.uoelogo-section {
+  height: 100%;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.uoelogo-section .image-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.uoelogo-section .centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
