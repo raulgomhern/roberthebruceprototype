@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scroll-wrapper {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+
+.scroll-section {
+  scroll-snap-stop: always;
+  height: 100%;
+  background-color: #577;
+  scroll-snap-align: start;
+}
+
+.banner-section {
+  height: 100%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a0/%2B1136_wurde_Das_Zisterienserkloster_Melrose_gegr%C3%BCndet._24.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.banner-content {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.0);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.banner-content h1 {
+  font-size: 2.5em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.banner-content .highlight {
+  color: #e60044;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 1.1em;
+  margin-top: 20px;
+  color: #00000;
+}
+
+.image-credit {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.8em;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.intro-section {
+  height: 300%;
+  background-color: #CCC9BC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+
+.intro-content {
+  max-width: 700px;
+}
+
+.intro-content h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.intro-content .highlight {
+  color: #e60044;
+  font-weight: bold;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  max-width: 1024px;
+}
+
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-container .image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: right;
+}
