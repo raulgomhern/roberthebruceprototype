@@ -227,6 +227,11 @@ body {
   color: #00;
 }
 
+.author .highlight a {
+  color: #e60044;
+  font-weight: bold;
+}
+
 .image-credit {
   position: absolute;
   bottom: 20px;
