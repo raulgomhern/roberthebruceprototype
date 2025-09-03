@@ -18,7 +18,7 @@
   --secondary-color: #3498db;
   --background-color: #ecf0f1;
   --text-color: #333;
-  --hover-color: #2980b9
+  --hover-color: #2980b9;
 }
 
 body {
@@ -221,8 +221,9 @@ body {
   font-weight: bold;
 }
 
+
 .author {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-top: 20px;
   color: #00;
 }
@@ -261,7 +262,7 @@ body {
 
 .intro-content h1 {
   font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -290,7 +291,7 @@ body {
 .bio-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -351,7 +352,7 @@ body {
 .tomb-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -407,7 +408,7 @@ body {
 .arch-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -467,7 +468,7 @@ body {
 .rose-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -523,7 +524,7 @@ body {
 .anat-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -566,7 +567,7 @@ body {
   text-align: right;
 }
 .cast-section {
-   height: 100%;
+  height: 100%;
   background-color: #CCC9BC;
   display: flex;
   flex-direction: column;
@@ -583,7 +584,7 @@ body {
 .cast-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -592,23 +593,21 @@ body {
   height: 100%;
   background-color: #fdfdfd;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
 }
 
 .phrenology-content {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+   max-width: 700px;
 }
 
 .phrenology-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -659,23 +658,21 @@ body {
   height: 100%;
   background-color: #fdfdfd;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
 }
 
 .phrenologycast-content {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  max-width: 700px;
 }
 
 .phrenologycast-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -701,10 +698,11 @@ body {
   height: 100%;
   background-color: #fdfdfd;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
 }
 
 .comparer-content {
@@ -714,7 +712,7 @@ body {
 .comparer-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -741,7 +739,7 @@ body {
 .image-slider-container {
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 370px;
   border: 5px solid #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -756,10 +754,10 @@ body {
   background-position: center;
 }
 .image-slider-container .image:nth-child(1) {
-  background: url("https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/reconstruccionartisticacomprada.JPG");
+  background: url("https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/4a.png");
 }
 .image-slider-container .image:nth-child(2) {
-  background: url("https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/cast-bruce.JPG");
+  background: url("https://raw.githubusercontent.com/raulgomhern/roberthebruceprototype/refs/heads/main/assets/img/4b.png");
   width: 50%;
 }
 .image-slider-container .range-slider {
@@ -856,7 +854,7 @@ body {
 .facial-content h1 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -872,35 +870,37 @@ body {
   position: relative;
 }
 
-.facialimage-section .facial-container {
+.facialimage-section .image-container {
+  position: relative;
   max-width: 700px;
 }
 
 .facialimage-section .centered-image {
-  max-width: 80%;
-  height: 20%;
+  max-width:100%;
+  height: auto;
   border-radius: 4px;
 }
 
 .facialimage-section .image-credit {
   position: absolute;
-  bottom: 15px;
-  right: 12px;
-  font-size: 0.6em;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
   background: #ffffffcc;
   color: #000;
-  padding: 1px 250px;
-  border-radius: 1px;
+  padding: 6px 10px;
+  border-radius: 4px;
   text-align: right;
 }
+
 .bye-section {
-   height: 150%;
+  height: 150%;
   background-color:  #CCC9BC;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 40px 20px;
+  padding: 50px 50px 50px;
   text-align: justify;
 }
 
@@ -911,9 +911,9 @@ body {
 .bye-content h2 {
   text-align: justify;
    font-family: 'Arial', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 .thanks-section {
   height: 100%;
@@ -934,7 +934,7 @@ body {
   text-align: justify;
    font-family: 'Arial', sans-serif;
    color: #ededed;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.6;
 }
